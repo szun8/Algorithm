@@ -18,4 +18,17 @@
 
     // endl => "\n" 사용
 ```
+<H4>🔗 P.funciton</H4>
 
+[15596. 정수 N개의 합](https://www.acmicpc.net/problem/15596)
+```c++
+#include <vector>
+#include <numeric>
+long long sum(std::vector<int> &a) {
+	long long ans = 0;
+	return ans = accumulate(a.begin(),a.end(),0LL);
+}
+```
+ - accumulate(시작, 끝, 초기값) 함수 : 지정된 범위안의 수를 더해주는 함수, 초기값은 적어주는대로 반환 타입이 정해짐 -> `0`을 입력하면 자동 `int`로 캐스팅, 그러므로 다른 자료형으로 반환하고자 할 때는 그에 맞게 초기값 설정을 해야 에러가 나질 않음!😅   
+  // `long long` : `0LL` 
+    

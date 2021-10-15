@@ -22,7 +22,7 @@ int main(){
             ave+=score[i];
         }
         ave/=student;
-        float num=0;\
+        float num=0;
         for(int i =0;i<student;++i){
             if(ave<score[i]) ++num;
         }
