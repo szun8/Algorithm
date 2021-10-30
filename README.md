@@ -57,3 +57,24 @@ long long sum(std::vector<int> &a) {
 🆘 조심   
     : `cin`과 `getline`을 연속해서 사용할 경우, `cin.ignore()`을 실행해 버퍼를 비워준 후,    
     사용해야 개행문자 입력구분을 받지 않고 내가 원하는 문자열을 입력할 수 있음!
+
+<H4>🔗  P.Bronze</H4>
+
+[1264. 모음의 개수](https://www.acmicpc.net/problem/1264)     
+🔆 [대문자를 소문자]로, [소문자를 대문자]로 바꿔주는 라이브러리 `<cctype>` 속의 함수 : `ASCII CODE`적으로 숫자를 대치해서 바꿔주는 것이기 때문에 int를 반환한다 ( `A` : 65 ↔️ `a` : 97 ) 
+
+🆘 조심   
+: `reverse` 처럼 반환값없이(void) 스스로 바뀌는 함수가 아니기때문에 반환값을 해당 문자(char)에 재대입해줘야 함을 잊지말자!
+```c++
+// 정의
+tolower(int _c) {
+        return (__tolower(_c));
+}
+
+toupper(int _c) {
+        return (__toupper(_c));
+}
+// 구현
+    char str[256];
+    str[i]=tolower(str[i]);
+```
