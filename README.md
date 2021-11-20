@@ -3,6 +3,15 @@
 📍 푸는 과정에서 모르는 것들을 알아가고 메모합니다   
 ❌ 웬만해서는 폴더경로 및 이름 번경을 하지 않습니다...제발😓
 
+<H3> 목차 </H3>
+
+* [P.for/while](#-p.for/while)
+* [P.funciton](#-p.function)
+* [P.sort](#-p.sort)
+* [P.stack](#-p.stack)
+* [P.Bronze](#-p.bronze)
+* * *
+
 <H4>🔗 P.for/while</H4>
 - cin/cout 최적화 in 빠른 A+B   
 
