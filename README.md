@@ -5,11 +5,11 @@
 
 <H3> 목차 </H3>
 
-* [P.for/while](#-p.for/while)
-* [P.funciton](#-p.function)
-* [P.sort](#-p.sort)
-* [P.stack](#-p.stack)
-* [P.Bronze](#-p.bronze)
+* [P.for/while](#-pforwhile)
+* [P.funciton](#-pfunction)
+* [P.sort](#-psort)
+* [P.stack](#-pstack)
+* [P.Bronze](#-pbronze)
 * * *
 
 <H4>🔗 P.for/while</H4>
