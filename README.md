@@ -10,6 +10,7 @@
 * [P.sort](#-psort)
 * [P.stack](#-pstack)
 * [P.Bronze](#-pbronze)
+* [P.Silver](#-psilver)
 * * *
 
 <H4>🔗 P.for/while</H4>
@@ -27,6 +28,7 @@
 
     // endl => "\n" 사용
 ```
+***
 <H4>🔗 P.function</H4>
 
 [15596. 정수 N개의 합](https://www.acmicpc.net/problem/15596)
@@ -40,14 +42,14 @@ long long sum(std::vector<int> &a) {
 ```
  - accumulate(시작, 끝, 초기값) 함수 : 지정된 범위안의 수를 더해주는 함수, 초기값은 적어주는대로 반환 타입이 정해짐 -> `0`을 입력하면 자동 `int`로 캐스팅, 그러므로 다른 자료형으로 반환하고자 할 때는 그에 맞게 초기값 설정을 해야 에러가 나질 않음!😅   
   // `long long` : `0LL`   
-
+***
 <H4>🔗 P.sort</H4>
 
 [10814. 나이순정렬](https://www.acmicpc.net/problem/10814)   
 🔆 `stable_sort` : 정렬의 비교함수에서 대소관계를 비교할 때 조건이 같다면, 정렬되는 인자를 들어온 순서대로 '안정적'으로 정렬되게 해주는 정렬 함수
 - 말 그대로 ! 안정적인 정렬
 - 그냥 `sort`보다 빠름 : 그냥 sort는 조건이 같은 것도 정렬과정을 거치기에 수행을 더 많이한다.
-
+***
 <H4>🔗 P.stack</H4>
 
 [4949. 균형잡힌 세상](https://www.acmicpc.net/problem/4949)   
@@ -73,6 +75,7 @@ long long sum(std::vector<int> &a) {
     : `cin`과 `getline`을 연속해서 사용할 경우, `cin.ignore()`을 실행해 버퍼를 비워준 후,    
     사용해야 개행문자 입력구분을 받지 않고 내가 원하는 문자열을 입력할 수 있음!
 
+***
 <H4>🔗 P.Bronze</H4>
 
 [1264. 모음의 개수](https://www.acmicpc.net/problem/1264)     
@@ -92,4 +95,20 @@ toupper(int _c) {
 // 구현
     char str[256];
     str[i]=tolower(str[i]);
+```
+
+***
+<H4>🔗 P.Silver</H4>
+
+[11723. 모음의 개수](https://www.acmicpc.net/problem/11723)     
+🔆 `memset` = memory + setting, 메모리의 내용을 원하는 크기 만큼 특정값으로 세팅해주는 `<cstring>` 속의 함수   
+🆘 조심  
+: 특정 세팅값을 `1byte(char) 단위`로 초기화 = int형이나 float형등으로는 원하는 값을 제대로 표현할 수 없음    
+➡️ `true`, `false`, `문자`로 초기화한다면 해당 함수는 유용하게 사용가능
+
+```c++
+#include <cstring>
+int set[10];
+memset(set, false, 10);
+// 1) 시작주소 2) 세팅값 3) 세팅 길이
 ```
