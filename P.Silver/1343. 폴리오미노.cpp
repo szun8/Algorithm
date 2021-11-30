@@ -49,7 +49,11 @@ int main(){
         }
         else if(count%4==0){
             int n = count/4;
-            
+            while(n>0){
+                int iter = what.find_first_of('X');
+                what.replace(what.begin()+iter,what.begin()+iter+4,"AAAA");
+                --n;
+            }
         }
         else if(count%2==0 && count>=4){
             int n = count/4;
