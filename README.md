@@ -122,6 +122,25 @@ cout << upper_bound(2)-bound.begin() << endl; // index 2 반환
 cout << lower_bound(2)-bound.begin() << endl; // index 1 반환
 ```
 
+[11004. K번째 수](https://www.acmicpc.net/problem/11004)     
+🔆 `nth_element` = n번째 수가 정렬될 때까지만 정렬해주는 `<algorithm>` 속의 부분 정렬 함수   
+🆘 조심  
+: n번째가 마지막 번째의 수가 아니라면 전체정렬을 하는 `sort`보다 시간복잡도를 (비교적)줄여줌, 기본적으로 `오름차순`, 마지막에 `비교함수`를 통해 원하는 조건 정렬도 가능
+
+```c++
+#include <algorithm>
+#include <vector>
+
+vector<int> elementSort;    // start = 3 -1 5 2
+elementSort.push_back(3);
+elementSort.push_back(-1);
+elementSort.push_back(5);
+elementSort.push_back(2);
+
+nth_element(elementSort.begin(), elementSort.begin()+2,elementSort.end()); // index 2번이 자리할 때까지 정렬
+nth_element(elementSort.begin(), elementSort.begin()+ elementSort.size()/2, elementSort.end()); // 중간값
+```
+
 [11723. 모음의 개수](https://www.acmicpc.net/problem/11723)     
 🔆 `memset` = memory + setting, 메모리의 내용을 원하는 크기 만큼 특정값으로 세팅해주는 `<cstring>` 속의 함수   
 🆘 조심  
