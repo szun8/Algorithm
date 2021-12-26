@@ -9,6 +9,10 @@ int main(){
     int f,s,g,u,d;
     cin>>f>>s>>g>>u>>d;
     vector<int> graph[f+1];
+    if(s==g){
+        cout<<"0";
+        return 0;
+    }
 
     for (int i = 1; i < f+1; i++) {
         int up = i + u;
