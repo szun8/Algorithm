@@ -115,6 +115,28 @@ cout.precision(4);
 cout<<num;         // 1234.5678
 ```
 
+[5344. 화성 수학](https://www.acmicpc.net/problem/5355)     
+🔆 split해주기 - `stringstream` : 공백기준으로 문자열 자르기 in `<sstream>`   
+✏️ `>>` : in / `<<` : out 
+
+```c++
+#include <sstream>  // istringstream(>>) + ostringstream(<<) = stringstream
+#include <iostream>
+using namespace std;
+
+string str // 문자열 입력
+string splitWord;  // str에서 파싱된 문자(열) 입력
+getline(cin, str);
+
+stringstream splitStr(str);     // 잘라줄 문자열 넣기
+while(splitStr >> splitWord){   
+// 잘라진 문자(열) 입력 (추출-복사의 과정)
+// 더이상 str에 맞는 자료형이 없을 때까지 반복해줌
+    cout<<splitWord<<endl;
+}
+```
+🔆 추가로 `substr`을 써도 문자열 자르기가 가능하다!   
+
 ***
 <H4>🔗 P.Silver</H4>
 
