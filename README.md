@@ -135,7 +135,17 @@ while(splitStr >> splitWord){
     cout<<splitWord<<endl;
 }
 ```
-🔆 추가로 `substr`을 써도 문자열 자르기가 가능하다!   
+🔆 추가로 `substr`을 써도 문자열 자르기가 가능하다! 
+
+[9654. 나부 함대 데이터](https://www.acmicpc.net/problem/9654)     
+🔆 원하는 만큼 공백란 출력 : printf("%-숫자s", string);
+
+```c++
+#include <iostream>
+using namespace std;
+printf("%-s5%-s10","Baekjoon","code");
+//Baekjoon     code          
+```
 
 ***
 <H4>🔗 P.Silver</H4>
