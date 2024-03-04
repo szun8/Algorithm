@@ -1,18 +1,7 @@
-# Baekjoon
-✳ Baekjoon coding test   
-📍 푸는 과정에서 모르는 것들을 알아가고 메모합니다   
-❌ 웬만해서는 폴더경로 및 이름 번경을 하지 않습니다...제발😓
-
-<H3> 목차 </H3>
-
-* [P.for/while](#-pforwhile)
-* [P.funciton](#-pfunction)
-* [P.sort](#-psort)
-* [P.stack](#-pstack)
-* [P.Bronze](#-pbronze)
-* [P.Silver](#-psilver)
-* * *
-
+📍 푸는 과정에서 모르는 것들을 알아가고 메모합니다    
+ 
+<H1>📚 BOJ 👩🏻‍💻
+	
 <H4>🔗 P.for/while</H4>
 - cin/cout 최적화 in 빠른 A+B   
 
@@ -215,5 +204,47 @@ memset(set, false, 10);
 🆘 조심  
 : 모든 상황에서 모든 그래프가 연결되어있는 것이 아니기때문에 비연결 그래프도 확인해줘야한다!
 
-___
-<H6>보고 잘못되거나 이상한 부분은 comment 남겨주세요 😂</H6>
+___    
+
+<H1>📚 Programmers 👩🏻‍💻 
+
+* 🗓 2021/8/4(WED)   
+  > `unique()` in `vector`   
+  > 🔗 [두 개 뽑아서 더하기](https://github.com/szun8/Programmers/commit/c46c703f260c13f6746a437fa984fcd553fbff67#r54506994)
+  
+* 🗓 2021/8/6(FRI)
+  > `isDight()` in `string` `cctype`   
+  > 🔗 [문자열 다루기 기본](https://github.com/szun8/Programmers/commit/f7b73a25ff39ea350d27dd39cd8c280933b692f7#r54506830)
+
+* 🗓 2021/8/8(SUN)
+  > `tolower` `toupper` in `string` `cctype`   
+  > 🔗 [문자열 내 p와 y의 개수](https://github.com/szun8/Programmers/commit/8a2393bcd208b28bcb27df6bc43bfe7af1465deb#r54579595)
+
+* 🗓 2021/8/12(THU)
+  > `find()` in `string`  
+  > 🔗 [숫자 문자열과 영단어](https://github.com/szun8/Programmers/commit/dabb4ae965eddbc8fc2376ba5f6f40d53b342d78#r54775165)
+
+* 🗓 2021/8/19(THU)
+  > `max_element` `min_element` in `algorithm`  
+  > 🔗 [상호 평가](https://github.com/szun8/Programmers/commit/ff92735e745d59c645de2562b971f36e782c7f79#r55129091)   
+  > 
+  > `최대공약수` `최소공배수` by `유클리드 호제법`   
+  > 🔗 [최대공약수와 최소공배수](https://github.com/szun8/Programmers/commit/da1ff0bd0285c7ba8d624cf1bed84a0659a5631d#r55128718)
+
+* 🗓 2021/8/20(FRI)
+  > `Greedy Algorithm`    
+  > 🔗 [체육복](https://github.com/szun8/Programmers/commit/9bf7342cfb6ad79c30b02934398614e472a6ebfa?branch=9bf7342cfb6ad79c30b02934398614e472a6ebfa&diff=unified#r55182498)
+
+
+* 🗓 2021/8/23(MON)
+  > `Map` in `associative container` `c++ study`   
+  > 🔗 [문자열 내 마음대로 정렬하기](https://github.com/szun8/Cpp_Unreal_lec#-map)
+
+* 🗓 2021/8/26(THU)
+  > `istringstream` `getline` `lambda`  
+  > 🔗 [4주차-직업군 추천하기](https://github.com/szun8/Programmers/commit/7391518217e329631edafdd06e8d8a149eec221d#r55452700)   
+  > 
+  > `에라토스테네스의 체`  
+  > 🔗 [소수 찾기](https://github.com/szun8/Programmers/commit/9148a3eafb814b93c0b221214b3ccfe49de2c92d?branch=9148a3eafb814b93c0b221214b3ccfe49de2c92d&diff=unified#r55452119
+)
+
