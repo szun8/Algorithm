@@ -1,12 +1,21 @@
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
-        sortedScores = sorted(score, reverse = True)
-        d = {sortedScores[i]: i+1 for i in range(len(sortedScores))}
+        rankHash = dict()
+        for i in range(len(score)):
+            rankHash[score[i]] = i
 
-        res = []
-        for i, val in enumerate(score):
-            if d[val] == 1: res.append("Gold Medal")
-            elif d[val] == 2: res.append("Silver Medal")
-            elif d[val] == 3: res.append("Bronze Medal")
-            else: res.append(f"{d[val]}")
-        return res
+        rankHash = sorted(rankHash.items(), reverse=True)
+        answer = [-1 for i in range(len(score))]
+        for i in range(len(rankHash)):
+            
+            if(i is 0):
+                 answer[rankHash[i][1]] = "Gold Medal"
+            elif(i is 1):
+                 answer[rankHash[i][1]] = "Silver Medal"
+            elif(i is 2):
+                 answer[rankHash[i][1]] = "Bronze Medal"
+            else:
+                 answer[rankHash[i][1]] = str(i+1)
+        return answer
+
+        
