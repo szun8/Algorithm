@@ -1,23 +1,18 @@
-#include <string>
-#include <vector>
-
 using namespace std;
-
 int solution(int storey) {
     int answer = 0;
     int a = 1;
     
     while(storey > 0){
         int b = storey % 10;
-        if(b==5){
+        if(b == 5){
             if(storey == b){
                 answer+=5;
                 break;
             }
-            else if(storey > 10 && (storey % 100) / 10 >= 5){
+            else if((storey % 100) / 10 >= 5){   // 십의 자리수 파악
                 answer += 5;
-                storey -= b;
-                storey += 10;
+                storey += (10-b);
             }
             else answer += b;
         }
@@ -26,9 +21,8 @@ int solution(int storey) {
             storey -= b;
             storey += 10;
         }
-        else { // 4~1
+        else  // 4~1
             answer += b;
-        }
         storey /= 10;
     }
     return answer;
