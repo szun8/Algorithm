@@ -17,9 +17,6 @@ void DFS(string answer, int cnt, int depth){
             DFS(answer+to_string(N[j]), cnt+1, depth+1);
         }
     }
-    if(depth == N.size()){
-        N[answer[0]-'0'-1] = -1;
-    }
 }
 
 int main(){
