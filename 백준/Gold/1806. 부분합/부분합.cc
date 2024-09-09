@@ -7,38 +7,36 @@ int main() {
     ios_base::sync_with_stdio(false);
 
     unsigned int n, s;
-    int answer = 0;
     cin >> n >> s;
-    vector<unsigned int> nums(n, 0);
-    vector<unsigned int> sums(n, 0);
-    unsigned int start = 0;
-    unsigned int end = 1;
-
-    for (int i = 0; i < n; i++) {
+    
+    vector<unsigned int> nums(n);
+    for (unsigned int i = 0; i < n; i++) {
         cin >> nums[i];
-        if (nums[i] == s) {
-            printf("1");
-            return 0;
-        }
-
-        if (i == 0)  sums[i] = nums[i];
-        else sums[i] = sums[i-1] + nums[i];
-
-        if (sums[i] == s) { // 0부터 i까지의 누적합이 s인 경우
-            answer = i + 1;
-        }
     }
-    // 이 수열에서 연속된 수들의 부분합 중에 그 합이 S 이상이 되는 것 중, 가장 짧은 것의 길이
-    while (start <= end && end < n) {
-        if (sums[end] - sums[start] >= s) {
-            if (answer == 0 || answer > end - start) {
-                answer = end - start;
-                if (answer == 2) break;
-            }
+
+    unsigned int start = 0;
+    unsigned int end = 0;
+    unsigned int current_sum = 0;
+    unsigned int answer = n + 1; // 초기값을 n보다 큰 값으로 설정
+
+    while (end < n) {
+        current_sum += nums[end];
+
+        while (current_sum >= s) {
+            answer = min(answer, end - start + 1);
+            current_sum -= nums[start];
             start++;
         }
-        else if (sums[end] - sums[start] < s) end++;
+        
+        end++;
     }
-    printf("%d", answer);
+
+    // 만약 answer가 초기값인 n + 1이라면, 부분합이 s 이상인 연속된 수열이 없다는 의미
+    if (answer == n + 1) {
+        cout << "0";
+    } else {
+        cout << answer;
+    }
+
     return 0;
 }
