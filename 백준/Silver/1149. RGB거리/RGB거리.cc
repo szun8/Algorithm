@@ -1,40 +1,26 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
-int main(){
-    int n;
-    cin>>n;
+vector<vector<int>> RGB;
+int main() {
+    // 8줄이라면 24번만에 끝남 -> 최종 시간복잡도 O(3N)
+    int n; cin >> n;
+    RGB.resize(n);
 
-    vector<vector<int> > rgb(n);
-    vector<vector<int> > rgbCost(n, vector <int>(3,0));
-    for(int i=0; i<n; i++){
-        for(int j=0; j<3; j++){
-            int cost;
-            cin >> cost;
-            rgb[i].push_back(cost);
-        }
+    int r, g, b;
+    for (int i = 0; i < n; i++) {
+        cin >> r >> g >> b;
+        RGB[i] = {r, g, b};
     }
 
-    rgbCost[0][0] = rgb[0][0];
-    rgbCost[0][1] = rgb[0][1];
-    rgbCost[0][2] = rgb[0][2];
-
-    for(int i=1; i<n; i++){
-        for(int j=0; j<3; j++){
-            if(j==0){
-                rgbCost[i][j] = min(rgbCost[i-1][j+1], rgbCost[i-1][j+2])+ rgb[i][j];
-            }
-            else if(j==1){
-                rgbCost[i][j] = min(rgbCost[i-1][j-1], rgbCost[i-1][j+1])+ rgb[i][j];
-            }
-            else if(j==2){
-                rgbCost[i][j] = min(rgbCost[i-1][j-1], rgbCost[i-1][j-2])+ rgb[i][j];
-            }
+    for (int i = n - 2; i >= 0; i--) {
+        for (int j = 0; j < 3; j++) {
+             // 자기 자식중 가장 비용이 작은 친구 선택
+            RGB[i][j] += min(RGB[i+1][(j + 1) % 3], RGB[i+1][(j + 2) % 3]);
         }
     }
-
-    cout<<*min_element(rgbCost[n-1].begin(), rgbCost[n-1].end());
+    printf("%d", *min_element(RGB[0].begin(), RGB[0].end()));
     return 0;
 }
