@@ -1,40 +1,40 @@
 #include <iostream>
+#include <stack>
 #include <vector>
+#define VAILD true
 using namespace std;
 
-int main(){
+int main() {
     cin.tie(NULL);
     ios_base::sync_with_stdio(false);
-
-    vector<int> line;
-    int rule[100001];
-    vector<char> out;
-
-    int count=0;    // stack에 들어가는 수 count
-    int ruleCount=0;    // 임의 수열이 체크됐는지 아닌지 확인
-
-    int n;
-    scanf("%d",&n);
-
-    for(int i=0; i<n;++i) scanf("%d",&rule[i]);
-
-    for (int i = 1; i <= n; i++)
-    {
-        line.push_back(i);
-        out.push_back('+');
-        while (!line.empty() && line.back() == rule[ruleCount]) {
-            line.pop_back();
-            out.push_back('-'); 
-            ruleCount++;
-        }
-    }
     
+    int n; cin >> n;
+    stack<int> s;
+    vector<char> print;
 
-    if(!line.empty()) printf("NO");
-    else{
-        for(int i = 0;i<out.size();++i){
-            cout<<out[i]<<"\n";
+    int input, curTopNum = 1;
+    for (int i = 0; i < n; i++) {
+        cin >> input;
+
+        while (VAILD) {
+            if (s.empty() || s.top() < input) {
+                s.push(curTopNum++);
+                print.push_back('+');
+            }
+
+            if (s.top() == input) {
+                s.pop();
+                print.push_back('-');
+                break;
+            }
+
+            if (curTopNum > input) {
+                printf("NO");
+                return 0;
+            }
         }
     }
+
+    for (int i = 0; i < print.size(); i++) printf("%c\n", print[i]);
     return 0;
 }
