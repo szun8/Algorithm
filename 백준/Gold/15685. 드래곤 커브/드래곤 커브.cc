@@ -69,8 +69,6 @@ int main() {
                         _x = rule_x[_x / abs(_x)]->x * abs(_x) + rule_y[_y / abs(_y)]->x * abs(_y) + point->x;
                         _y = rule_x[tmpX / abs(tmpX)]->y * abs(tmpX) + rule_y[_y / abs(_y)]->y * abs(_y) + point->y;
                     }
-                    coord[_y][_x] = true;
-
                     tmpPoint->x = _x;
                     tmpPoint->y = _y;
                 }
