@@ -4,7 +4,7 @@
 using namespace std;
 
 long long solution(int n, vector<int> times) {
-    sort(times.begin(), times.end());
+    //sort(times.begin(), times.end());
 
     long long mid, left = times[0], right = (long long)times.back() * n;
 
