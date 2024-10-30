@@ -1,10 +1,10 @@
 # [level 3] 이중우선순위큐 - 42628 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42628) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42628?language=csharp) 
 
 ### 성능 요약
 
-메모리: 10.8 MB, 시간: 464.48 ms
+메모리: 55.3 MB, 시간: 1645.58 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 08월 08일 18:32:23
+2024년 10월 31일 01:37:13
 
 ### 문제 설명
 
